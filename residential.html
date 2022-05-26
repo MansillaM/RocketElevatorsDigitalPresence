@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Smarty - Multipurpose + Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a href="index.html" class="logo float-left">
+							<img src="newimagelevator/R2.png"/>
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class="active"><!-- HOME -->
+										<a href="index.html">
+											HOME
+										</a>
+									</li>
+									<li><!-- SERVICES -->
+										<a href="#services">
+											SERVICES
+										</a>
+									</li>
+									<li><!-- WORK -->
+										<a href="#work">
+											WORK
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a href="#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="#contact">
+											CONTACT
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+			<!-- HOME -->
+			<section id="home" class="h-450" style="background:url('newimagelevator/landingpagemain.jpg')">
+				<div class="display-table">
+					<div class="display-table-cell vertical-align-middle">
+						
+						<div class="container text-center">
+							<h1 style="color:rgb(0,0,0)" class="m-0 fs-50 fw-300 wow fadeInUp" data-wow-delay="0.4s"><strong>The Solution For Residential Elevators</strong></h1>
+							<p style="color:rgb(0,0,0)" class="lead font-lato fs-30 wow fadeInUp" data-wow-delay="0.7s">We have unlimited solutions for you!.</p>
+							
+							
+
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<!-- /HOME -->
+
+
+
+
+			<!-- FEATURES -->
+			<section id="features">
+				<div class="container">
+
+					<header class="text-center mb-60">
+						<h2>Our Features</h2>
+						<hr />
+					</header>
+
+					<!-- FEATURED BOXES 3 -->
+					<div class="row">
+						<div class="col-md-4 col-8">
+							<div class="text-center">
+								<i class="ico-light ico-lg ico-rounded ico-hover et-circle-compass"></i>
+								<h4>Precision</h4>
+								<p>Pin point precision state-of-the-art technology.</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-8">
+							<div class="text-center">
+								<i class="ico-light ico-lg ico-rounded ico-hover et-piechart"></i>
+								<h4>Buisness Oriented</h4>
+								<p>Boost the economy with our programs.</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-8">
+							<div class="text-center">
+								<i class="ico-light ico-lg ico-rounded ico-hover et-strategy"></i>
+								<h4>Startegy</h4>
+								<p>We predict your every moment to give you an impeccable service.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /FEATURES -->
+
+			<!-- TESTIMONIALS -->
+			<section id="testimonials" class="alternate">
+				<div class="container">
+
+					<header class="text-center mb-60">
+						<h2>Your Feedback</h2>
+						<p class="lead font-lato">Read Our Most Recent Feedback</p>
+						<hr />
+					</header>
+
+					<!-- 
+						Note: remove class="rounded" from the img for squared image!
+					-->
+					<div class="row mb-60">
+						<div class="col-md-4">
+							<div class="testimonial testimonial-bordered p-15">
+								<figure class="float-left">
+									<img class="rounded" src="demo_files/images/people/300x300/2-min.jpg" alt="" />
+								</figure>
+								<div class="testimonial-content">
+									<p>Wow amazed by their project. They really know how to make your dream a reality.</p>
+									<cite>
+										Felicia Doe
+										<span>Ghostwriter for Drake</span>
+									</cite>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="testimonial testimonial-bordered p-15">
+								<figure class="float-left">
+									<img class="rounded" src="demo_files/images/people/300x300/1-min.jpg" alt="" />
+								</figure>
+								<div class="testimonial-content">
+									<p>Its unbelievable how fast and reliable they are! Would recommend!!</p>
+									<cite>
+										Joana Doe
+										<span>School Director</span>
+									</cite>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="testimonial testimonial-bordered p-15">
+								<figure class="float-left">
+									<img class="rounded" src="demo_files/images/people/300x300/6-min.jpg" alt="" />
+								</figure>
+								<div class="testimonial-content">
+									<p>They did exactly what I wanted no hesiatation and no problem!</p>
+									<cite>
+										Melissa Doe
+										<span>StormTroomper 789</span>
+									</cite>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 
+						Note: remove class="rounded" from the img for squared image!
+					-->
+					
+
+				</div>
+			</section>
+			<!-- /TESTIMONIALS -->
+
+	<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+
+					<div class="row">
+
+						<!-- col #1 -->
+						<div class="col-md-8">
+
+							<h3 class="letter-spacing-1">GIVE US A CALL NOW</h3>
+
+							<!-- Small Description -->
+							<p>
+								We are the leading innovators in the Elevator industry. Come meet our top engineers to have a in depth look at how we start and finish projects.
+							</p>
+							<h2>+1 (800)-887-2497</h2>
+						</div>
+						<!-- /col #1 -->
+
+						<!-- col #2 -->
+						<div class="col-md-4">
+							<h3 class="letter-spacing-1">ONE EMAIL AWAY TO MAKE YOUR DREAM COME TRUE</h3>
+
+							<!-- Newsletter Form -->
+							<p>Subscribe to Our Newsletter to get Important News & Offers Related To Our Works</p>
+
+							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-success" type="submit">Subscribe</button>
+									</span>
+								</div>
+							</form>
+							<!-- /Newsletter Form -->
+
+
+						</div>
+						<!-- /col #2 -->
+
+					</div>
+
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="float-right m-0 list-inline mobile-block">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li>&bull;</li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						&copy; All Rights Reserved, Company LTD
+					</div>
+				</div>
+
+			</footer>
+			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+
+			</script>
+	</body>
+</html>
