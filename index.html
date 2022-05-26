@@ -156,32 +156,32 @@
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 									<li class="active"><!-- HOME -->
-										<a href="index.html">
+										<a href="index.html" id="home-nav">
 											HOME
 										</a>
 									</li>
 									<li><!-- SERVICES -->
-										<a href="#services">
+										<a href="#services" id="services-nav">
 											SERVICES
 										</a>
 									</li>
 									<li><!-- WORK -->
-										<a href="#work">
-											WORK
+										<a href="#work" id="portfolio-nav">
+											PORTFOLIO
 										</a>
 									</li>
 									<li><!-- NEWS -->
-										<a href="#news">
+										<a href="#news" id="news-nav">
 											NEWS
 										</a>
 									</li>
 									<li><!-- CLIENTS -->
-										<a href="#clients">
+										<a href="#clients" id="clients-nav">
 											CLIENTS
 										</a>
 									</li>
 									<li><!-- CONTACT -->
-										<a href="#contact">
+										<a href="#contact" id="contact-nav">
 											CONTACT
 										</a>
 									</li>
@@ -918,13 +918,13 @@
 
 
 			<!-- Testimonials -->
-			<section class="section-xs dark">
+			<section class="section-xs dark" id="team">
 				<div class="container">
 
 					<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
-						<div class="testimonial">
+						<div class="testimonial" id="CEO">
 							<figure>
-								<img class="rounded" src="assets/images/rocket/ceo pic.png" alt="" />
+								<img class="rounded" src="assets/images/rocket/CEO.jpg.png" alt="" />
 							</figure>
 							<div class="testimonial-content p-0">
 								<p class="lead">The Best CEO On Forbes Magazine.</p>
@@ -934,9 +934,9 @@
 								</cite>
 							</div>
 						</div>
-						<div class="testimonial">
+						<div class="testimonial" id="employee">
 							<figure>
-								<img class="rounded" src="assets/images/rocket/WIN_20220523_12_41_58_Pro.jpg" alt="" />
+								<img class="rounded" src="assets/images/rocket/employee-of-the-month.jpg.jpg" alt="" />
 							</figure>
 							<div class="testimonial-content p-0">
 								<p class="lead">Our Top Employee For The 5th Year In A Row.</p>
@@ -1193,7 +1193,8 @@
 					<header class="text-center mb-60">
 						<h2>Contact Us</h2>
 						<p class="lead font-lato">4468 Wellington St Suite 204, Verdun, Quebec H4G 1W5</br></p>
-						<p>+1 800-887-2497</p>
+						<p>(418) 555-1234</br></p>
+						<p>info@codeboxx.biz</p>
 						<hr />
 					</header>
 
@@ -1258,33 +1259,33 @@
 									<div class="row">
 											<div class="col-md-3">
 												<label for="contact:name">Contact Full Name *</label>
-												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+												<input required type="text" value="" class="form-control" name="contact[name][required]" id="name">
 											</div>
 											<div class="col-md-3">
-												<label for="contact:email">Buisness Name *</label>
-												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
-											</div>
-											<div class="col-md-3">
-												<label for="contact:phone">Email</label>
-												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+												<label for="contact:email">Email *</label>
+												<input required type="email" value="" class="form-control" name="contact[email][required]" id="email">
 											</div>
 											<div class="col-md-3">
 												<label for="contact:phone">Phone Number</label>
-												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+												<input type="text" value="" class="form-control" name="contact[phone]" id="phone">
+											</div>
+											<div class="col-md-3">
+												<label for="contact:phone">Buisness Name</label>
+												<input type="text" value="" class="form-control" name="contact[phone]" id="company_name">
 											</div>
 									</div>
 									<div class="row">
 											<div class="col-md-4">
 												<label for="contact:subject">Project Name *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="project_name">
 											</div>
 											<div class="col-md-8">
 												<label for="contact:subject">Project Description *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="project_description">
 											</div>
 											<div class="col-md-4">
 												<label for="contact_department">Departement</label>
-												<select class="form-control pointer" name="contact[department]">
+												<select class="form-control pointer" name="department">
 													<option value="">--- Select ---</option>
 													<option value="Marketing">Residential</option>
 													<option value="Webdesign">Corporate</option>
@@ -1294,7 +1295,7 @@
 									<div class="row">
 											<div class="col-md-12">
 												<label for="contact:message">Message *</label>
-												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="message"></textarea>
 											</div>
 									</div>
 									<div class="row">
@@ -1302,7 +1303,7 @@
 												<label for="contact:attachment">File Attachment</label>
 
 												<!-- custom file upload -->
-												<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
+												<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="attachment" data-btn-text="Select a File" />
 												<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
 
 											</div>
@@ -1372,13 +1373,13 @@
 						<!-- col #1 -->
 						<div class="col-md-8">
 
-							<h3 class="letter-spacing-1">GIVE US A CALL NOW</h3>
+							<h3 class="letter-spacing-1">WHY US?</h3>
 
 							<!-- Small Description -->
 							<p>
-								We are the leading innovators in the Elevator industry. Come meet our top engineers to have a in depth look at how we start and finish projects.
+								We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have.
 							</p>
-							<h2>+1 (800)-887-2497</h2>
+							<h2>(418) 555-1234</h2>
 						</div>
 						<!-- /col #1 -->
 
