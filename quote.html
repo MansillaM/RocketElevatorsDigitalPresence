@@ -147,6 +147,114 @@
 					</div>
 				</header>
 				<!-- /Top Nav -->
+			</div>
+
+
+				
+				<form>
+					
+					
+					<label for="cars">Specify building type:</label>
+
+					<select name="building_type" id="building">
+					  <option value="residential">Residential</option>
+					  <option value="commercial">Commercial</option>
+					  <option value="corporate">Corporate</option>
+					  <option value="hybrid">Hybrid</option>
+					</select>
+
+					<!--/For RESIDENTIAL-->
+
+					<p style="text-align:left">The number of apartments</br></p>
+ 					 <input type="number" name="number_of_apartment">
+ 					 <br/>
+
+					  <p style="text-align:left">The number of floor</br></p>
+ 					 <input type="number" name="number_of_floor">
+ 					 <br/>
+
+					  <p style="text-align:left">The number of basements</br></p>
+ 					 <input type="number" name="number_of_basement">
+ 					 <br/>
+
+					<!--For COMMERCIAL-->
+
+					<p style="text-align:left">The number of distinct businesses</br></p>
+ 					 <input type="number" name="distinct_buisnesses">
+ 					 <br/>
+					  
+					  <p style="text-align:left">The number of parking space</br></p>
+ 					 <input type="number" name="number_of_parking">
+ 					 <br/>
+					  
+					  <p style="text-align:left">The number of elevator cages to be deployed?</br></p>
+ 					 <input type="number" name="elevator_cages">
+ 					 <br/>
+
+					  <!--For CORPORATE-->
+					  
+					  <p style="text-align:left">The number of separate tenant companies?</br></p>
+ 					 <input type="number" name="tenant_companies">
+ 					 <br/>
+					  
+					  <p style="text-align:left">The maximum number of occupants per floor?</br></p>
+ 					 <input type="number" name="occupants_per_floor">
+ 					 <br/>
+
+					  <!--For HYBRID-->
+					  
+					  <p style="text-align:left">The number of hours of activity of the building (the maximum being 24)?</br></p>
+ 					 <input type="number" name="activity">
+ 					 <br/>
+
+					<!--RADIO FORM-->
+
+					  <input type="radio" id="standard" name="product_line" value="Standard">
+					  <label for="standard">Standard</label><br>
+					  <input type="radio" id="premium" name="product_line" value="Premium">
+					  <label for="premium">Premium</label><br>
+					  <input type="radio" id="excelium" name="product_line" value="Excelium">
+					  <label for="excelium">Excelium</label>
+
+					  <!--CONCLUSION-->
+					  
+					  <p style="text-align:right">The amount of elevators needed</br></p>
+ 					 <input type="text" name="amount_of_elevators" readonly>
+ 					 <br/>
+
+					  <p style="text-align:right">The unit price of each elevator</br></p>
+ 					 <input type="text" name="unit_price" readonly>
+ 					 <br/>
+
+					  <p style="text-align:right">The total price of the elevators</br></p>
+ 					 <input type="text" name="total_price" readonly>
+ 					 <br/>
+
+					  <p style="text-align:right">The installation fees</br></p>
+ 					 <input type="text" name="installation_fee" readonly>
+ 					 <br/>
+					  
+					  <p style="text-align:right">The final price</br></p>
+ 					 <input type="text" name="final-price" readonly>
+ 					 <br/>
+					
+
+
+				</form>
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -233,7 +341,6 @@
 
 		<script src="assets/js/scripts.js"></script>
 		
-		<!-- STYLESWITCHER - REMOVE -->
-		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+
 	</body>
 </html>
