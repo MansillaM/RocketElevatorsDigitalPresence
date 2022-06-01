@@ -4,10 +4,13 @@
 
 $(document).ready(() => {
     
+    /** Hide everything upon arriving on site */ 
+
     hideAll();
 
    
-   
+   /** Hide, show input depending on radio clicked and reset fields*/
+
     $('#building-type').change(function () {
         resetFields();
         if ($(this).val() == 'empty') {
@@ -23,13 +26,13 @@ $(document).ready(() => {
         }
     })
 
-    /** Commercial */
+    /** Commercial # of elevators */
 
     $('input[name="elevator_cages"]').change(function () {
         $('input[name="amount_of_elevators"]').val($(this).val());
     })
 
-    /** Residential */
+    /** Residential # of elevators needed from app and floor */
 
     $('input[name="number_of_apartment"]').change(function () {
         // Step 1: Get values inputed by user
@@ -47,7 +50,7 @@ $(document).ready(() => {
         parseInt($('input[name=amount_of_elevators]').val(elevatorRequired));
     })
 
-    /** Corporate/Hybrid */
+    /** Corporate/Hybrid amount of elevators needed from occ/floor # of basement and floors */
 
     $('input[name="occupants_per_floor"]').change(function () {
         // Step 1: Get value inputed by user //
@@ -67,7 +70,7 @@ $(document).ready(() => {
     })
 
     
-    /** Installation Fee && Elevator Total Price*/
+    /** Installation Fee && Elevator Total Price calculation to get upon selecting radio */
 
     $('input[name="product_line"]').click(function () {
         // Step 1: Get value inputed by user //
@@ -85,7 +88,7 @@ $(document).ready(() => {
         $('input[name=total_price]').val(elevatorPriceTotal.toLocaleString("en-US", {style:"currency", currency:"USD"}));
     })
 
-    /** Total Price */
+    /** Total Price with elevator prices and fees */
 
     $('input[name="product_line"]').click(function () {
         // Step 1: Get value inputed by user //
@@ -98,7 +101,7 @@ $(document).ready(() => {
          $('input[name=final-price]').val(totalPrice.toLocaleString("en-US", {style:"currency", currency:"USD"}));
     })
 
-    /** Price Per Elevator*/
+    /** Price Per Elevator when I have # of elevators needed */
 
     $('input[name="product_line"]').click(function () {
         // Step 1: Get value inputed by user //
@@ -118,6 +121,8 @@ $(document).ready(() => {
 
 });
 
+/** Hide every questions and input */
+
 function hideAll() {
     $('.residential').hide();
     $('.commercial').hide();
@@ -127,6 +132,8 @@ function hideAll() {
     $('.answer').hide();
 }
 
+/** Only show residential questions, input and answers */
+
 function residentialSHOW() {
     hideAll();
     $('.residential').show();
@@ -134,12 +141,16 @@ function residentialSHOW() {
     $('.answer').show();
 }
 
+/** Only show commercial questions, input and answers */
+
 function commercialSHOW() {
     hideAll();
     $('.commercial').show();
     $('.radios').show();
     $('.answer').show();
 }
+ 
+/** Only show corporate questions, input and answers */
 
 function corporateSHOW() {
     hideAll();
@@ -148,12 +159,16 @@ function corporateSHOW() {
     $('.answer').show();
 }
 
+/** Only show hybrid questions, input and answers */
+
 function hybridSHOW() {
     hideAll();
     $('.hybrid').show();
     $('.radios').show();
     $('.answer').show();
 }
+
+/** Reset every field upon switching from the dropdownmenu */
 
 function resetFields() {
 
@@ -176,6 +191,8 @@ function resetFields() {
 
 }
 
+/** Calculation for # of elevator needed for Residential from values */
+
 function calculateResidentialElevator(numApp, numFloor) {
     // TODO: make sure result is correct
     //($(this).val() = math.floor(numApp / numFloor));
@@ -193,6 +210,8 @@ function calculateResidentialElevator(numApp, numFloor) {
     return numberOfElevator
 
 }
+
+/** Calculation for # of elevator needed for Corporate/Hybrid from values */
 
 function calculateCorporateHybridElevator(numOccFloor, numBase, numFloor) {
 
@@ -213,6 +232,8 @@ function calculateCorporateHybridElevator(numOccFloor, numBase, numFloor) {
 
 }
 
+/** Get installation fees from # of elevators and existing values */
+
 function getInstallationFees(productLine) {
     let elevatorAmount = $('input[name=amount_of_elevators]').val();
 
@@ -227,6 +248,8 @@ function getInstallationFees(productLine) {
     
 
 }
+
+/** Elevator price from # of elevator and existing values */
 
 function getTotalElevatorPrice(productLine) {
 
@@ -245,6 +268,8 @@ function getTotalElevatorPrice(productLine) {
 
 }
 
+/** Total price , take same equation from elevator price and instalation fee */
+
 function getTotalPrice(productLine) {
     
     
@@ -261,6 +286,8 @@ function getTotalPrice(productLine) {
     }
     
 }
+
+/** Elevator unit price from existing value  */
 
 function getPricePerElevator(productLine) {
     
