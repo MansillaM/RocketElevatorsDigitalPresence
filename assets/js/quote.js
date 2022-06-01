@@ -3,11 +3,13 @@
 /**Selection */
 
 $(document).ready(() => {
+    
     hideAll();
 
    
    
     $('#building-type').change(function () {
+        resetFields();
         if ($(this).val() == 'empty') {
             hideAll();
         } else if ($(this).val() == 'residential') {
@@ -111,8 +113,7 @@ $(document).ready(() => {
          $('input[name="unit_price"]').val(pricePerElevator.toLocaleString("en-US", {style:"currency", currency:"USD"}));
     })
 
-     
-      
+    
         
 
 });
@@ -152,6 +153,27 @@ function hybridSHOW() {
     $('.hybrid').show();
     $('.radios').show();
     $('.answer').show();
+}
+
+function resetFields() {
+
+    $('input[name="number_of_apartment"]').val('');
+    $('input[name="number_of_floor"]').val('');
+    $('input[name="number_of_basement"]').val('');
+    $('input[name="distinct_buisnesses"]').val('');
+    $('input[name="number_of_parking"]').val('');
+    $('input[name="elevator_cages"]').val('');
+    $('input[name="tenant_companies"]').val('');
+    $('input[name="occupants_per_floor"]').val('');
+    $('input[name="activity"]').val('');
+    $('input[name="product_line"]').prop('checked', false);
+    $('input[name="amount_of_elevators"]').val('');
+    $('input[name="unit_price"]').val('');
+    $('input[name="total_price"]').val('');
+    $('input[name="installation_fee"]').val('');
+    $('input[name="final-price"]').val('');
+
+
 }
 
 function calculateResidentialElevator(numApp, numFloor) {
