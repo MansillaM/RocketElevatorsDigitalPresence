@@ -166,7 +166,7 @@
 
 		<!--FORM-->
 
-		<form>
+		<form id="myForm">
 			<div class="container">
 				<div class="row menu">
 					<div class="col">
@@ -193,7 +193,7 @@
 						</div>
 					</div>
 					<div class="col">
-						<input type="number" name="number_of_apartment">
+						<input type="number" name="number_of_apartment" min="1">
 					</div>
 				</div>
 
@@ -204,7 +204,7 @@
 						</div>
 					</div>
 					<div class="col">
-						<input type="number" name="number_of_floor">
+						<input type="number" name="number_of_floor" min="1">
 					</div>
 				</div>
 
@@ -215,7 +215,7 @@
 						</div>
 					</div>
 					<div class="col">
-						<input type="number" name="number_of_basement">
+						<input type="number" name="number_of_basement" min="1">
 					</div>
 				</div>
 
@@ -228,7 +228,7 @@
 						</div>
 					</div>
 					<div class="col">
-						<input type="number" name="distinct_buisnesses">
+						<input type="number" name="distinct_buisnesses" min="1">
 					</div>
 				</div>
 
@@ -239,18 +239,18 @@
 						</div>
 					</div>
 					<div class="col">
-						<input type="number" name="number_of_parking"">
+						<input type="number" name="number_of_parking" min="1">
  							 </div>
 					</div>
 					  
 					<div class="row commercial">
 						<div class="col">
 							<div id="number-of-elevators">
-								<label>N. of elevator</label>
+								<label>N. of elevators</label>
 							</div>
 						</div>
 						<div class="col">
-							<input type="number" name="elevator_cages">
+							<input type="number" name="elevator_cages" min="1">
 						</div>
 					</div>
 
@@ -263,7 +263,7 @@
 							</div>
 						</div>
 						<div class="col">
-							<input type="number" name="tenant_companies">
+							<input type="number" name="tenant_companies" min="1">
 						</div>
 					</div>
 
@@ -274,7 +274,7 @@
 							</div>
 						</div>
 						<div class="col">
-							<input type="number" name="occupants_per_floor">
+							<input type="number" name="occupants_per_floor" min="1">
 						</div>
 					</div>
 
@@ -287,7 +287,7 @@
 							</div>
 						</div>
 						<div class="col">
-							<input type="number" name="activity">
+							<input type="number" name="activity" min="1" max="24">
 						</div>
 					</div>
 
@@ -332,7 +332,7 @@
 							</div>
 						</div>
 						<div class="col">
-							<input type="text" name="amount_of_elevators" readonly>
+							<input type="text" name="amount_of_elevators" id="answers" readonly>
 						</div>
 					</div>
 
@@ -343,18 +343,18 @@
 							</div>
 						</div>
 						<div class="col">
-							<input type="text" name="unit_price" readonly>
+							<input type="text" name="unit_price" id="answers" readonly>
 						</div>
 					</div>
 
 					<div class="row answer">
 						<div class="col">
 							<div id="elevator-total-price">
-								<label>Elevator price</label>
+								<label>Elevator total price</label>
 							</div>
 						</div>
 						<div class="col">
-							<input type="text" name="total_price" readonly>
+							<input type="text" name="total_price" id="answers" readonly>
 						</div>
 					</div>
 
@@ -365,7 +365,7 @@
 							</div>
 						</div>
 						<div class="col">
-							<input type="text" name="installation_fee" readonly>
+							<input type="text" name="installation_fee" id="answers" readonly>
 						</div>
 					</div>
 
@@ -376,7 +376,7 @@
 							</div>
 						</div>
 						<div class="col">
-							<input type="text" name="final-price" readonly>
+							<input type="text" name="final-price" id="answers" readonly>
 						</div>
 					</div>
 
