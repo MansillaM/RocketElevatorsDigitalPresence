@@ -75,7 +75,7 @@ function calculateCommercial() {
     let elevatorNeeded = elevatorReq;
     let totalElevatorPrice = unitPrice * elevatorNeeded;
     let installationFees = totalElevatorPrice * installationFeeMultiplier;
-    let totalElPrice = totalElevatorPrice * installationFees;
+    let totalElPrice = totalElevatorPrice + installationFees;
     
     // Step 3: display elevatorRequired as the value of the answer on the HTML /
 
